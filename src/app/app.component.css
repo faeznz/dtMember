@@ -2,28 +2,49 @@
    background-color: transparent;
 }
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background: linear-gradient(45deg, rgba(65, 55, 141, 0.8), rgba(119, 42, 190, 0.8));
   padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.navbar-header {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Menyebabkan elemen navbar-header memperluas sebanyak yang tersedia */
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: #ebebeb;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.show-menu {
+  display: flex !important;
+}
  
  .navbar h1 {
    margin-left: 30px;
    color: #ebebeb;
+   flex-grow: 1;
  }
  
  .navbar ul {
-   display: flex;
-   list-style: none;
-   margin-right: 30px;
-   padding: 0;
- }
- 
- .navbar li {
-   margin-left: 20px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+  margin: 0;
  }
 
  .navbar button {
@@ -32,6 +53,8 @@
    border: none;
    padding: 10px 20px;
    margin-left: 20px;
+   margin-top: 10px;
+   margin-bottom: 10px;
  }
 
  .navbar button:hover {
@@ -47,8 +70,8 @@
  }
  
  .navbar li button {
-   text-decoration: none;
    color: #570c9c;
+   text-decoration: none;
    font-weight: bold;
    margin-left: 10px;
    letter-spacing: 1px;
@@ -57,6 +80,7 @@
    align-items: center;
    justify-content: center;
    font-size: 14px;
+   width: 95%;
  }
  
  .navbar li i {
@@ -68,6 +92,8 @@
  .navbar li button.login-button {
   background-color: #4CAF50; 
   color: #ffffff;
+  width: 95%;
+  
 }
 
  .navbar li button.login-button:hover {
@@ -78,11 +104,13 @@
 .navbar li button.logout-button {
   background-color: #f05c4e; 
   color: #ffffff;
+  width: 95%;
 }
 
 .navbar li button.logout-button:hover {
   background-color: #c2392d; 
   color: #ffffff;
 }
+
 
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
 
@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   currentRoute!: string;
+  isMenuOpen = false;
 
   constructor(public authService: AuthService, private router: Router) { }
 
@@ -22,5 +23,20 @@ export class AppComponent {
 
   logout(): void {
     this.authService.logout();
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    const menuButton = document.querySelector('.menu-button') as HTMLElement;
+
+    // Close menu if the clicked element is not the menu button or its child elements
+    if (!menuButton.contains(target)) {
+      this.isMenuOpen = false;
+    }
   }
 }

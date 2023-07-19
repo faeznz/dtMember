@@ -5,14 +5,14 @@ h1 {
    color: #f1f1f1;
 }
 form {
-   width: 50%;
+   width: 100%;
+   max-width: 1200px;
    margin: 20px auto;
    text-align: center;
  }
 
  label {
-  display: flex;
-  margin-left: 128px;
+  display: block;
   margin-bottom: 5px;
   font-size: large;
   color: #f1f1f1;
@@ -43,6 +43,7 @@ form {
    border-radius: 20px;
    cursor: pointer;
    font-size: medium;
+   width: 200px;
  }
 
  button[type="submit"]:hover {
@@ -55,6 +56,8 @@ form {
    border: none;
    border-radius: 20px;
    cursor: pointer;
+   font-size: medium;
+   width: 200px;
  }
 
  button[type="submit"]:hover {

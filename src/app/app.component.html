@@ -1,22 +1,28 @@
 <nav>
   <div class="navbar">
-    <h1>{{ isLoggedIn() ? 'Selamat datang, ' + authService.getUsername() : 'Data Member' }}</h1>
-    <ul>
+    <div class="navbar-header">
+      <h1>Data Member</h1>
+      <button class="menu-button" (click)="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <ul [ngClass]="{ 'show-menu': isMenuOpen }">
       <li><button routerLink="/dashboard"><i class="fas fa-list-ul"></i>Daftar Member</button></li>
       <li><button *ngIf="isLoggedIn()" routerLink="/tambah"><i class="fas fa-plus"></i>Tambah Member</button></li>
       <li>
         <ng-container *ngIf="authService.isLoggedIn(); else showLoginButton">
           <!-- Tombol Logout -->
-          <button (click)="logout()" class="logout-button"><i class="fas fa-sign-out-alt" style="color: #ffffff;"></i>Logout</button>
+          <button (click)="logout()" class="logout-button"><i class="fas fa-sign-out-alt"></i>Logout</button>
         </ng-container>
         <ng-template #showLoginButton>
           <!-- Tombol Login -->
-          <button routerLink="/login" class="login-button"><i class="fas fa-sign-in-alt" style="color: #ffffff;"></i>Login</button>
+          <button routerLink="/login" class="login-button"><i class="fas fa-sign-in-alt"></i>Login</button>
         </ng-template>
       </li>
     </ul>
   </div>
 </nav>
+
 
 
 <router-outlet></router-outlet>
