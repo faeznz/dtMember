@@ -1,0 +1,42 @@
+<h1>Tambah Member</h1>
+
+<form (ngSubmit)="addMember()">
+  <div>
+    <label for="nik">NIK:</label>
+    <input type="text" id="nik" name="nik" [(ngModel)]="member.nik" required>
+  </div>
+  <div>
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" [(ngModel)]="member.nama" required>
+  </div>
+  <div>
+    <label for="alamat">Alamat:</label>
+    <input type="text" id="alamat" name="alamat" [(ngModel)]="member.alamat" required>
+  </div>
+  <div>
+    <label for="noHp">No HP:</label>
+    <input type="text" id="noHp" name="noHp" [(ngModel)]="member.noHp" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="member.email" required>
+  </div>
+  <div>
+    <label for="instagram">Instagram:</label>
+    <input type="text" id="instagram" name="instagram" [(ngModel)]="member.instagram" required>
+  </div>
+  <div>
+    <label for="tanggalKadaluarsa">Tanggal Kadaluarsa:</label>
+    <input type="date" id="tanggalKadaluarsa" name="tanggalKadaluarsa" [(ngModel)]="member.tanggalKadaluarsa" required>
+  </div>
+  <div>
+    <label for="jenisMember">Jenis Member:</label>
+    <select id="jenisMember" name="jenisMember" [(ngModel)]="member.jenisMember" required>
+      <option class="option" value="Basic">Basic</option>
+      <option class="option" value="Advance">Advance</option>
+      <option class="option" value="VIP">VIP</option>
+    </select>
+  </div>
+  <button type="submit">Tambahkan</button>
+  <button routerLink="/" class="cancel">Cancel</button>
+</form>

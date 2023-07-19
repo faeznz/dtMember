@@ -1,0 +1,37 @@
+<h1>Daftar Member</h1>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th *ngIf="isLoggedIn()">NIK</th>
+        <th *ngIf="isLoggedIn()">Alamat</th>
+        <th *ngIf="isLoggedIn()">No HP</th>
+        <th *ngIf="isLoggedIn()">Email</th>
+        <th *ngIf="isLoggedIn()">Instagram</th>
+        <th>Tanggal Kadaluarsa</th>
+        <th>Jenis Member</th>
+        <th *ngIf="isLoggedIn()"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let member of members; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td class="nama">{{ member.nama }}</td>
+        <td *ngIf="isLoggedIn()">{{ member.nik }}</td>
+        <td *ngIf="isLoggedIn()">{{ member.alamat }}</td>
+        <td *ngIf="isLoggedIn()">{{ member.noHp }}</td>
+        <td *ngIf="isLoggedIn()">{{ member.email }}</td>
+        <td *ngIf="isLoggedIn()">{{ member.instagram }}</td>
+        <td>{{ formatTanggal(member.tanggalKadaluarsa) }}</td>
+        <td>{{ member.jenisMember }}</td>
+        <td class="action" *ngIf="isLoggedIn()">
+          <button *ngIf="isLoggedIn()" (click)="editMember(member._id)">Edit</button>
+          <button *ngIf="isLoggedIn()" (click)="deleteMember(member._id)" class="delete">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

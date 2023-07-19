@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Satisfy&display=swap');
+
+* {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   /* background-color: #8d6d9c; */
+}
+body{
+   background: linear-gradient(rgba(9, 1, 37, 0.7), rgba(9, 1, 37, 0.7), rgba(9, 1, 37, 0.7)), url(./assets/bg.png);
+}

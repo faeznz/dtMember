@@ -1,0 +1,94 @@
+h1 {
+  text-align: center;
+  margin: 50px;
+  text-transform: uppercase;
+  color: #f1f1f1;
+}
+
+table {
+  width: 97%;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+th {
+  background-color: #4d39bb;
+  color: #f1f1f1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+td{
+  font-size: 14px;
+}
+
+.nama {
+  text-align: left;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #ffbb00;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: medium;
+  margin: 5px;
+  width: 100px;
+}
+
+button:hover {
+  background-color: #ce9702;
+}
+
+.delete {
+  background-color: #f05c4e;
+  color: white;
+}
+
+.delete:hover {
+  background-color: #a04545;
+}
+
+@media only screen and (max-width: 600px) {
+  table {
+    font-size: 12px;
+  }
+
+  .nama {
+    white-space: initial;
+    overflow: initial;
+    text-overflow: initial;
+  }
+
+  button {
+    font-size: 10px;
+  }
+
+  .delete {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+/* Selang-seling warna abu-abu tua dan muda */
+tr:nth-child(even) {
+  background-color: rgba(241, 241, 241, 0.6);
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(211, 211, 211, 0.6);
+}

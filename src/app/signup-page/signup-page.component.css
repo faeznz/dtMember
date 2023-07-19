@@ -1,0 +1,63 @@
+h1 {
+   text-align: center;
+   margin: 50px;
+   text-transform: uppercase;
+   color: #f1f1f1;
+}
+form {
+   width: 50%;
+   margin: 20px auto;
+   text-align: center;
+ }
+
+ label {
+  display: flex;
+  margin-left: 128px;
+  margin-bottom: 5px;
+  font-size: large;
+  color: #f1f1f1;
+}
+
+ input[type="text"],
+ input[type="password"],
+ select {
+   width: 70%;
+   padding: 8px 15px 8px 15px;
+   margin-bottom: 32px;
+   background-color: #f1f1f1;
+   border: 1px solid #f1f1f1;
+   border-radius: 30px;
+   box-sizing: border-box;
+ }
+
+ select option {
+  background-color: #f1f1f1;
+ }
+
+ button[type="submit"] {
+   padding: 10px 50px;
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+ }
+
+ button[type="submit"]:hover {
+   background-color: #45a049;
+ }
+ .cancel{
+   padding: 10px 50px;
+   background-color: #f05c4e;
+   color: white;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+ }
+
+ button[type="submit"]:hover {
+   background-color: #45a049;
+ }
+ button {
+   margin: 10px;
+ }
