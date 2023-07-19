@@ -1,5 +1,5 @@
 {
-  "name": "data-member",
+  "name": "dtmember",
   "version": "0.0.0",
   "scripts": {
     "start": "ng serve",
