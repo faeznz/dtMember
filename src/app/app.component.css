@@ -1,63 +1,54 @@
 * {
    background-color: transparent;
 }
+
+.nav {
+  display: block;
+  justify-content: space-between;
+}
+
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: linear-gradient(45deg, rgba(65, 55, 141, 0.8), rgba(119, 42, 190, 0.8));
   padding: 20px;
-  position: relative;
+}
+
+.navbar-btn {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
+  background: linear-gradient(45deg, rgba(65, 55, 141, 0.8), rgba(119, 42, 190, 0.8));
+  padding: 20px;
 }
 
-.navbar-header {
-  display: flex;
-  align-items: center;
-  flex-grow: 1; /* Menyebabkan elemen navbar-header memperluas sebanyak yang tersedia */
-}
-
-.menu-button {
-  background-color: transparent;
-  border: none;
-  padding: 10px;
-  color: #ebebeb;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.show-menu {
-  display: flex !important;
-}
  
  .navbar h1 {
    margin-left: 30px;
    color: #ebebeb;
-   flex-grow: 1;
  }
  
- .navbar ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px 0;
-  margin: 0;
+ .navbar-btn ul {
+   display: flex;
+   list-style: none;
+   margin-right: 30px;
+   padding: 0;
+ }
+ 
+ .navbar-btn li {
+   margin-left: 20px;
  }
 
- .navbar button {
+ .navbar-btn button {
    background-color: #ffbb00;
    border-radius: 30px;
    border: none;
    padding: 10px 20px;
    margin-left: 20px;
-   margin-top: 10px;
-   margin-bottom: 10px;
  }
 
- .navbar button:hover {
+ .navbar-btn button:hover {
    background-color: #dda200;
    border-radius: 30px;
    border: none;
@@ -65,13 +56,13 @@
    margin-left: 20px;
  }
  
- .navbar li:first-child {
+ .navbar-btn li:first-child {
    margin-left: 0;
  }
  
- .navbar li button {
-   color: #570c9c;
+ .navbar-btn li button {
    text-decoration: none;
+   color: #570c9c;
    font-weight: bold;
    margin-left: 10px;
    letter-spacing: 1px;
@@ -80,36 +71,84 @@
    align-items: center;
    justify-content: center;
    font-size: 14px;
-   width: 95%;
  }
  
- .navbar li i {
+ .navbar-btn li i {
    color: #762abe;
    margin-right: 15px;
    font-size: large;
  }
+
+ .navbar-btn li button.login-button i {
+   color: #f7f7f7;
+   margin-right: 15px;
+   font-size: large;
+ }
+
+ .navbar-btn li button.logout-button i {
+   color: #f7f7f7;
+   margin-right: 15px;
+   font-size: large;
+ }
  
- .navbar li button.login-button {
+ .navbar-btn li button.login-button {
   background-color: #4CAF50; 
   color: #ffffff;
-  width: 95%;
-  
 }
 
- .navbar li button.login-button:hover {
+ .navbar-btn li button.login-button:hover {
   background-color: #348837; 
   color: #ffffff;
 }
 
-.navbar li button.logout-button {
+.navbar-btn li button.logout-button {
   background-color: #f05c4e; 
   color: #ffffff;
-  width: 95%;
 }
 
-.navbar li button.logout-button:hover {
+.navbar-btn li button.logout-button:hover {
   background-color: #c2392d; 
   color: #ffffff;
+}
+
+.toggle-menu {
+  display: none;
+  background-color: #ffbb00;
+  border-radius: 30px;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  margin-left: 20px;
+  width: 60px;
+}
+
+#open {
+  font-size: 16px;
+}
+
+.show-menu {
+  display: flex !important;
+}
+
+@media (max-width: 768px) {
+  .navbar-btn ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  .toggle-menu {
+    display: block;
+  }
+
+  .navbar-btn li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .navbar-btn li button {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 

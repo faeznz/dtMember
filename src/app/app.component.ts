@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   currentRoute!: string;
-  isMenuOpen = false;
+  isMenuOpen: boolean = false;
 
   constructor(public authService: AuthService, private router: Router) { }
 
@@ -25,18 +25,18 @@ export class AppComponent {
     this.authService.logout();
   }
 
-  toggleMenu() {
+  toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
   @HostListener('document:click', ['$event'])
-  onClick(event: MouseEvent) {
-    const target = event.target as HTMLElement;
-    const menuButton = document.querySelector('.menu-button') as HTMLElement;
+  onDocumentClick(event: MouseEvent): void {
+    const targetElement = event.target as HTMLElement;
+    const isMenuClicked = targetElement.matches('.toggle-menu, .toggle-menu i');
+    const isMenuOpen = this.isMenuOpen;
 
-    // Close menu if the clicked element is not the menu button or its child elements
-    if (!menuButton.contains(target)) {
-      this.isMenuOpen = false;
+    if (!isMenuClicked && isMenuOpen) {
+      this.toggleMenu();
     }
   }
 }
