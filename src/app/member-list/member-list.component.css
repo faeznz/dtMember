@@ -38,8 +38,7 @@ td{
 }
 
 .action {
-  display: flex;
-  justify-content: space-between;
+  display: block;
 }
 
 button {
