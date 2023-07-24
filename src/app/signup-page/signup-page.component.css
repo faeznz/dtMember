@@ -1,21 +1,21 @@
 h1 {
-   text-align: center;
-   margin: 50px;
-   text-transform: uppercase;
-   color: #f1f1f1;
+  text-align: center;
+  margin: 50px;
+  text-transform: uppercase;
+  color: #f1f1f1;
 }
 form {
-   width: 50%;
-   margin: 20px auto;
-   text-align: center;
- }
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+}
 
- label {
-  display: flex;
-  margin-left: 128px;
-  margin-bottom: 5px;
-  font-size: large;
-  color: #f1f1f1;
+label {
+ display: block;
+ margin-bottom: 5px;
+ font-size: large;
+ color: #f1f1f1;
 }
 
  input[type="text"],
@@ -35,29 +35,38 @@ form {
  }
 
  button[type="submit"] {
-   padding: 10px 50px;
-   background-color: #4CAF50;
-   color: white;
-   border: none;
-   border-radius: 20px;
-   cursor: pointer;
- }
+  padding: 10px 50px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: medium;
+  width: 200px;
+}
 
- button[type="submit"]:hover {
-   background-color: #45a049;
- }
- .cancel{
-   padding: 10px 50px;
-   background-color: #f05c4e;
-   color: white;
-   border: none;
-   border-radius: 20px;
-   cursor: pointer;
- }
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+.cancel{
+  padding: 10px 50px;
+  background-color: #f05c4e;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: medium;
+  width: 200px;
+}
 
- button[type="submit"]:hover {
-   background-color: #45a049;
- }
- button {
-   margin: 10px;
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+button {
+  margin: 10px;
+}
+
+ .daftar {
+  color: #f1f1f1;
+  text-decoration: none;
  }
