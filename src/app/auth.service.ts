@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private serverUrl = 'https://ill-ruby-jay-kit.cyclic.app/'; 
+  private serverUrl = 'https://drab-tan-rattlesnake-vest.cyclic.app/'; 
   private loggedIn = false; // Menyimpan status login pengguna
   private username: string = '';
 

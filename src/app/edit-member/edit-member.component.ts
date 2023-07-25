@@ -19,14 +19,14 @@ export class EditMemberComponent implements OnInit {
   }
 
   getMember(id: string) {
-    this.http.get<any>(`https://ill-ruby-jay-kit.cyclic.app/members/${id}`)
+    this.http.get<any>(`https://drab-tan-rattlesnake-vest.cyclic.app/members/${id}`)
       .subscribe(data => {
         this.member = data;
       });
   }
 
   updateMember() {
-    this.http.put(`https://ill-ruby-jay-kit.cyclic.app/members/${this.memberId}`, this.member)
+    this.http.put(`https://drab-tan-rattlesnake-vest.cyclic.app/members/${this.memberId}`, this.member)
       .subscribe(() => {
         console.log('Member updated successfully');
         // Lakukan tindakan setelah mengupdate member, jika diperlukan

@@ -16,7 +16,7 @@ export class AddMemberComponent implements OnInit {
   }
 
   addMember() {
-    this.http.post('https://ill-ruby-jay-kit.cyclic.app/members', this.member)
+    this.http.post('https://drab-tan-rattlesnake-vest.cyclic.app/members', this.member)
       .subscribe(() => {
         console.log('Member added successfully');
         // Lakukan tindakan setelah menambahkan member, seperti mengosongkan input

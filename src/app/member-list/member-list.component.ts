@@ -19,7 +19,7 @@ export class MemberListComponent implements OnInit {
   }
 
   getMembers() {
-    this.http.get<any[]>('https://ill-ruby-jay-kit.cyclic.app/members')
+    this.http.get<any[]>('https://drab-tan-rattlesnake-vest.cyclic.app/members')
       .subscribe(data => {
         this.members = data;
       });
@@ -43,7 +43,7 @@ export class MemberListComponent implements OnInit {
       return;
     }
   
-    this.http.delete(`https://ill-ruby-jay-kit.cyclic.app/members/${id}`)
+    this.http.delete(`https://drab-tan-rattlesnake-vest.cyclic.app/members/${id}`)
       .subscribe(() => {
         console.log('Member deleted successfully');
         if (this.members && memberIndex !== undefined) {
