@@ -19,7 +19,7 @@ export class MemberListComponent implements OnInit {
   }
 
   getMembers() {
-    this.http.get<any[]>('https://drab-tan-rattlesnake-vest.cyclic.app/members')
+    this.http.get<any[]>('https://data-member-backend.vercel.app/')
       .subscribe(data => {
         this.members = data;
       });
@@ -30,7 +30,7 @@ export class MemberListComponent implements OnInit {
     const tanggalObj = new Date(tanggal);
     return tanggalObj.toLocaleDateString('id-ID', options);
   }
-  
+
   editMember(id: string) {
     this.router.navigate(['/edit-member', id]);
   }
@@ -42,7 +42,7 @@ export class MemberListComponent implements OnInit {
       console.log('Member not found');
       return;
     }
-  
+
     this.http.delete(`https://drab-tan-rattlesnake-vest.cyclic.app/members/${id}`)
       .subscribe(() => {
         console.log('Member deleted successfully');
@@ -56,7 +56,7 @@ export class MemberListComponent implements OnInit {
         console.log('Failed to delete member', error);
       });
   }
-  
+
   isLoggedIn(): boolean {
     return this.authService.isLoggedIn();
   }

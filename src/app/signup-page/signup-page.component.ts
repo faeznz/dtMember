@@ -21,7 +21,7 @@ export class SignupPageComponent implements OnInit{
 
   login() {
     const userData = { username: this.username, password: this.password };
-    this.http.post<any>('https://drab-tan-rattlesnake-vest.cyclic.app/users', userData)
+    this.http.post<any>('https://data-member-backend.vercel.app/', userData)
       .subscribe(
         response => {
           // Save the token in the browser's local storage
