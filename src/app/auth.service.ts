@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private serverUrl = 'https://data-member-backend.vercel.app/';
+  private serverUrl = 'https://data-member-backend.vercel.app';
   private loggedIn = false; // Menyimpan status login pengguna
   private username: string = '';
 
