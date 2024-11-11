@@ -19,11 +19,17 @@ export class MemberListComponent implements OnInit {
   }
 
   getMembers() {
-    this.http.get<any[]>('https://data-member-backend.vercel.app/')
-      .subscribe(data => {
+  this.http.get<any[]>('https://data-member-backend.vercel.app/members')
+    .subscribe({
+      next: data => {
         this.members = data;
-      });
-  }
+      },
+      error: error => {
+        console.log('Failed to get members', error);
+        // Tampilkan pesan error ke user, misalnya dengan alert atau toast
+      }
+    });
+}
 
   formatTanggal(tanggal: string): string {
     const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
@@ -43,7 +49,7 @@ export class MemberListComponent implements OnInit {
       return;
     }
 
-    this.http.delete(`https://drab-tan-rattlesnake-vest.cyclic.app/members/${id}`)
+    this.http.delete(`https://data-member-backend.vercel.app/members/${id}`)
       .subscribe(() => {
         console.log('Member deleted successfully');
         if (this.members && memberIndex !== undefined) {
